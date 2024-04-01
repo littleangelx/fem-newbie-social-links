@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  font-weight: 400 600 700;
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+}
+
+:root {
+  --clr-off-black: hsl(0, 0%, 8%);
+  --clr-dark-grey: hsl(0, 0%, 12%);
+  --clr-grey: hsl(0, 0%, 20%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-green: hsl(75, 94%, 57%);
+
+  --font-family-default: "Inter", sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  --fs-100: 0.75rem;
+  --fs-200: 1rem;
+  --fs-300: 1.25rem;
+
+  --padding: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family-default);
+  background-color: var(--clr-off-black);
+  display: grid;
+  place-items: center;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  background-color: var(--clr-dark-grey);
+  width: 25rem;
+  max-width: 80%;
+  border-radius: 1rem;
+  padding: var(--padding);
+}
+
+@media (min-width: 37.5rem) {
+  main {
+    padding: calc(var(--padding) * 1.25);
+  }
+}
+
+.grid-flow {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.grid-flow[data-spacing="medium"] {
+  gap: 1rem;
+}
+
+.grid-flow[data-spacing="large"] {
+  gap: 2rem;
+}
+
+img {
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: var(--fs-300);
+  color: var(--clr-white);
+}
+
+.location {
+  color: var(--clr-green);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-100);
+}
+
+.tagline {
+  color: var(--clr-white);
+  font-size: var(--fs-100);
+}
+
+.social-links {
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-grey);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-200);
+}
